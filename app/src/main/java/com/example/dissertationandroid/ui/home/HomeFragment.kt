@@ -10,6 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.dissertationandroid.R
 import com.example.dissertationandroid.databinding.FragmentHomeBinding
+import io.kommunicate.Kommunicate
 
 class HomeFragment : Fragment() {
 
@@ -36,6 +37,7 @@ class HomeFragment : Fragment() {
             textView.text = it
         })
 
+        Kommunicate.init(context, "38eac480f499b449606408459aa35b6d0")
 
         return root
     }

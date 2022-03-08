@@ -1,6 +1,7 @@
 package com.example.dissertationandroid.ui.login
 
 import android.app.Activity
+import android.content.Intent
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -12,6 +13,7 @@ import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.Toast
+import com.example.dissertationandroid.MainActivity
 import com.example.dissertationandroid.databinding.ActivityLoginBinding
 
 import com.example.dissertationandroid.R
@@ -107,6 +109,8 @@ class LoginActivity : AppCompatActivity() {
             "$welcome $displayName",
             Toast.LENGTH_LONG
         ).show()
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
     }
 
     private fun showLoginFailed(@StringRes errorString: Int) {
